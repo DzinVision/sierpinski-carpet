@@ -1,7 +1,8 @@
 #include "game.hpp"
 
 Game::Game() {
-    window.create(sf::VideoMode(window_resolution, window_resolution), "Sierpinski Carpet");
+
+    window.create(sf::VideoMode(window_resolution, window_resolution), "Sierpinski Carpet", sf::Style::Titlebar | sf::Style::Close);
     window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(60);
 }
