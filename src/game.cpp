@@ -97,7 +97,7 @@ void Game::update() {
     } else if (offset.y > diff) {
         offset.y = diff;
     }
-    
+
 
     if (previous_zoom_level == zoom_level && !offset_changed) {
         return;
@@ -122,8 +122,6 @@ void Game::render() {
 
 void Game::shapes_for_level(double x, double y, double size) {
     const double sub_size = size / 3.0;
-
-    //std::cout << "x: " << x << std::endl << "y: " << y << std::endl << "offset x: " << offset.x << std::endl << "offset y:" << offset.y << std::endl << std::endl;
 
     if (sub_size < 5 || x - offset.x > window_resolution || y - offset.y > window_resolution || x + size < offset.x || y + size < offset.y) {
         return;
