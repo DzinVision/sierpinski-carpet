@@ -2,15 +2,17 @@
 #define GAME_HPP
 
 #include <SFML/Graphics.hpp>
+#include <locale>
 #include <vector>
 #include <limits>
 #include <iostream>
+#include <chrono>
 
 class Game {
   private:
     sf::RenderWindow window;
 
-    unsigned int window_resolution = 1200;
+    unsigned int window_resolution = 800;
 
     double zoom_level = 1.0;
     double min_zoom_level = 1.0;
